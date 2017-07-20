@@ -1,1 +1,1 @@
-Algorithm in JavaScript
+## Algorithm in JavaScript

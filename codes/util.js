@@ -1,7 +1,7 @@
 
 //-----------------------------Stack堆栈:先进后出----------------------------------
 function Stack(){
-	var aElement = new Array();
+	const aElement = new Array();
 
 	/*
 		@brief: 获取堆栈元素个数
@@ -16,7 +16,7 @@ function Stack(){
 		@return：true/false
 	*/
 	Stack.prototype.isEmpty = function(){
-		return aElement === 0 ? true : false;
+		return aElement.length === 0 ? true : false;
 	}
 
 	/*
@@ -31,7 +31,7 @@ function Stack(){
 		for (var i = 0; i < arguments.length; i++){
   		aElement.push(arguments[i]);     
   	}
-		return aElement.length;
+		//return aElement.length;
 	}
 
 	/*
