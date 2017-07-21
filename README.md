@@ -6,7 +6,7 @@
 #### 1. 数组、栈和队列
 [1.1 设计一个有getMin功能的栈](./md/1.1twoStackQueue.md)
 
-[1.2 生成窗口最大值数组](./md/1.2twoStackQueue.md)
+[1.2 生成窗口最大值数组](./md/1.2getWindowMax.md)
 
 [1.3 扁平化有序数组](./md/1.3flattenOrderArray.md)
 
