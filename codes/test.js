@@ -74,7 +74,7 @@ var arr = (function(){
   var obj ={} ,num = 0;
   return students.map(x => {
    	return obj[x.groupid]||!x.groupid ? false : (obj[x.groupid] = 1 && num++,({g_id:x.groupid,g_name:x.groupname,g_count:num}))
-  }).filter(x => x)
+  })
 })()
 
-console.log(filter(students));
+console.log(arr);
