@@ -5,10 +5,15 @@
 
 #### 1. 数组
 [1.1 设计一个有getMin功能的栈](./md/1.1twoStackQueue.md)
+
 [1.2 生成窗口最大值数组](./md/1.2getWindowMax.md)
+
 [1.3 扁平化有序数组](./md/1.3flattenOrderArray.md)
+
 [1.4 最大全1子矩阵](./md/1.4getMaxMatrix.md)
+
 ### 二、说明
+
 - 很多题目来自`《程序员代码面试指南》`一书，和网站搜集的题目；
 - 程序代码在codes目录下；
 - 持续更新中；
