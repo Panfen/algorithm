@@ -14,7 +14,7 @@
 
 [1.5 数组去重乱序求交并差集](./md/1.5arrayOptions.md)
 
-[1.6 矩阵分圈打印](.md/1.6matrixCirclePrint.md)
+[1.6 矩阵分圈打印](./md/1.6matrixCirclePrint.md)
 
 #### 2. 二叉树问题
 
