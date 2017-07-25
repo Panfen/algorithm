@@ -3,7 +3,7 @@
 
 ### 一、目录
 
-#### 1. 数组
+#### 1. 数组、矩阵
 [1.1 设计一个有getMin功能的栈](./md/1.1twoStackQueue.md)
 
 [1.2 生成窗口最大值数组](./md/1.2getWindowMax.md)
@@ -15,6 +15,8 @@
 [1.5 数组去重乱序求交并差集](./md/1.5arrayOptions.md)
 
 [1.6 矩阵分圈打印](./md/1.6matrixCirclePrint.md)
+
+[1.7 方阵旋转打印](./md/1.7matrixRotatePrint.md)
 
 #### 2. 二叉树问题
 
