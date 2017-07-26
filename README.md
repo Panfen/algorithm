@@ -18,6 +18,8 @@
 
 [1.7 方阵旋转打印](./md/1.7matrixRotatePrint.md)
 
+[1.8 找到无序数组中的最小k个数](./md/1.8minKDisorderArr.md)
+
 #### 2. 二叉树问题
 
 ### 二、说明
