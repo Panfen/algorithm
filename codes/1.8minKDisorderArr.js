@@ -91,6 +91,7 @@ function copyArray(arr){
 	return res;
 }
 
+// 在arr所给范围内找到第i小的数
 function select(arr, begin, end, i){
 	if(begin == end){
 		return arr[begin];
@@ -105,6 +106,7 @@ function select(arr, begin, end, i){
 		return select(arr, pivotRange[1]+1, end, i);
 }
 
+// 划分过程，以pivotValue为分割点，比其小的在左边，比其大的在右边
 function partition(arr, begin, end, pivotValue){
 	var small = begin - 1;
 	var cur = begin;
@@ -120,6 +122,7 @@ function partition(arr, begin, end, pivotValue){
 	return [small+1, big-1];
 }
 
+// 在中位数的数组mArr中寻找中位数
 function medianofMedians(arr, begin, end){
 	var num = end - begin + 1;
 	var offset = num % 5 == 0 ? 0 : 1;
@@ -133,6 +136,7 @@ function medianofMedians(arr, begin, end){
 	return select(mArr, 0, len-1, Math.floor(len/2));
 }
 
+// 获取中位数
 function getMedian(arr, begin, end){
 	insertionSort(arr, begin, end);
 	var sum = end + begin;
@@ -140,6 +144,7 @@ function getMedian(arr, begin, end){
 	return arr[mid];
 }
 
+// 插入排序
 function insertionSort(arr, begin, end){
 	for(var i = begin + 1; i != end +1; i++){
 		for(var j = i; j != begin; j--){
