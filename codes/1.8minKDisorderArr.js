@@ -56,5 +56,101 @@ function heapify(arr, index, heapSize){
 }
 
 
+
+/*
+	@brief: 找到无序数组中的最小k个数
+	@remark：采用BFPRT算法
+*/
+function getMinKNumsByBFPRT(arr, k){
+	if(k < 1 || k > arr.length){
+		return arr;
+	}
+	var minKth = getMinKthByBFPRT(arr, k);
+	var res = [];
+	var index = 0;
+	for(var i=0; i != arr.length; i++){
+		if(arr[i] < minKth)
+			res[index++] = arr[i];
+	};
+	for(; index != res.length; index){
+		res[index] = minKth;
+	}
+	return res;
+}
+
+function getMinKthByBFPRT(arr, k){
+	var copyArr = copyArray(arr);
+	return select(copyArr, 0, copyArr.length-1, k-1);
+}
+
+function copyArray(arr){
+	var res = [];
+	for(var i=0; i != arr.length; i++){
+		res[i] = arr[i];
+	}
+	return res;
+}
+
+function select(arr, begin, end, i){
+	if(begin == end){
+		return arr[begin];
+	}
+	var pivot = medianofMedians(arr, begin, end);
+	var pivotRange = partition(arr, begin, end, pivot);
+	if(i >= pivotRange[0] && i <= pivotRange[1])
+		return arr[i];
+	else if(i < pivotRange[0])
+		return select(arr, begin, pivotRange[0]-1, i);
+	else
+		return select(arr, pivotRange[1]+1, end, i);
+}
+
+function partition(arr, begin, end, pivotValue){
+	var small = begin - 1;
+	var cur = begin;
+	var big = end + 1;
+	while(cur != big){
+		if(arr[cur] < pivotValue)
+			swap(arr, ++small, cur++);
+		else if(arr[cur] > pivotValue)
+			swap(arr, cur, --big);
+		else
+			cur++;
+	}
+	return [small+1, big-1];
+}
+
+function medianofMedians(arr, begin, end){
+	var num = end - begin + 1;
+	var offset = num % 5 == 0 ? 0 : 1;
+	var len = Math.floor(num / 5) + offset;
+	var mArr = [];
+	for(var i=0; i<len; i++){
+		var beginI = begin + i * 5;
+		var endI = beginI + 4;
+		mArr[i] = getMedian(arr, beginI, Math.min(end, endI));
+	}
+	return select(mArr, 0, len-1, Math.floor(len/2));
+}
+
+function getMedian(arr, begin, end){
+	insertionSort(arr, begin, end);
+	var sum = end + begin;
+	var mid = (Math.floor(sum / 2)) + (sum % 2);
+	return arr[mid];
+}
+
+function insertionSort(arr, begin, end){
+	for(var i = begin + 1; i != end +1; i++){
+		for(var j = i; j != begin; j--){
+			if(arr[j-1] > arr[j])
+				swap(arr, j-1, j);
+			else
+				break;
+		}
+	}
+}
+
 var arr = [8,0,5,2,2,3,4,9,6,7,9];
+console.log(getMinKNumsByBFPRT(arr,4));
 console.log(getMinKNumsByHeap(arr,4));
