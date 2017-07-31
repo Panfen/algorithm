@@ -20,6 +20,8 @@
 
 [1.8 找到无序数组中的最小k个数(TOP-K问题)](./md/1.8minKDisorderArr.md)
 
+[1.9 需要排序的最短子数组长度](./md/1.9minDisorderLength.md)
+
 #### 2. 二叉树问题
 
 ### 二、说明
