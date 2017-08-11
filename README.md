@@ -22,7 +22,7 @@
 
 [1.9 需要排序的最短子数组长度](./md/1.9minDisorderLength.md)
 
-[1.10 在数组中找到出现次数大于N/K的数](./md/1.10findOverKNumbers.md)
+[1.10 在数组中找到出现次数大于N/K的数](./md/1.10findOverKNumbers.md) (★★★★☆)
 #### 2. 二叉树问题
 
 ### 二、说明
