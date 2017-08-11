@@ -131,7 +131,110 @@ function Queue(){
 }
 
 
+//-----------------------------HashMap----------------------------------
+function HashMap(){
+	var length = 0;   // map的长度
+	var obj = new Object();
+
+	/*
+		@brief: 判断是否为空
+		@return: true/false
+	*/
+	this.isEmpty = function(){
+		return length == 0;
+	}
+
+	/*
+		@brief: 判断是否包含给定key
+		@return: true/false
+	*/
+	this.containsKey = function(key){
+		return (key in obj)
+	}
+
+	/*
+		@brief: 判断是否包含给定value
+		@return: true/false
+	*/
+	this.containsValue = function(){
+		for(var key in obj){
+			if(obj[key] == value)
+				return true;
+		}
+		return false;
+	}
+
+	/*
+		@brief: 向map中添加元素
+		@return: 
+	*/
+	this.put = function(key, value){
+		if(!this.containsKey(key)){
+			length ++;
+		}
+		obj[key] = value;
+	}
+
+	/*
+		@brief: 获取给定key的value
+		@return: value
+	*/
+	this.get = function(key){
+		return this.containsKey(key) ? obj[key] : null;
+	}
+
+	/*
+		@brief: 删除给定key
+		@return: 
+	*/
+	this.remove = function(key){
+		if(this.containsKey(key) && (delete obj[key])) length--;
+	}
+
+	/*
+		@brief: 获取所有key
+		@return: keys
+	*/
+	this.keys = function(){
+		var _keys = new Array();
+		for(var key in obj){
+			_keys.push(key);
+		}
+		return _keys;
+	}
+
+	/*
+		@brief: 获取所有的value
+		@return: values
+	*/
+	this.values = function(key){
+		var _values = new Array();
+		for(var key in obj){
+			_values.push(obj[key]);
+		}
+		return _values;
+	}
+
+	/*
+		@brief: 获取map的长度
+		@return: length
+	*/
+	this.size = function(key){
+		return length;
+	}
+
+	/*
+		@brief: 清空map
+		@return: length
+	*/
+	this.clear = function(key){
+		length = 0;
+		obj = new Object();
+	}
+}
+
 module.exports = {
 	Stack:Stack,
-	Queue:Queue
+	Queue:Queue,
+	HashMap:HashMap
 }
