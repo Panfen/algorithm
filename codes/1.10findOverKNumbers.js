@@ -98,5 +98,5 @@ function getReals(arr, cands){
 
 
 var arr = [1,2,3,2,2,4,2,5,2,5,6,7,2,2,2,2,25,2,2,5,5,5,5,5];
-console.log(arr.length)
-findKMajor(arr, 4)
+findHalfMajor(arr);
+findKMajor(arr, 4);
