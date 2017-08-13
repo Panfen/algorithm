@@ -10,7 +10,7 @@ function getSmallSum(arr){
 
 function func(s, l, r){
 	if(l == r) return 0;
-	var mid = (l + r) / 2;
+	var mid = Math.floor((l + r) / 2);
 	return func(s, l, mid) + func(s, mid + 1, r) + merge(s, l, mid, r);
 }
 
@@ -23,16 +23,10 @@ function merge(s, left, mid, right){
 	while(i <= mid  && j <= right){
 		if(s[i] <= s[j]){
 			smallSum += s[i] * (right - j + 1);
-			h[hi++] = s[i++];
+			i++;
 		}else{
-			h[hi++] = s[j++];
+			j++;
 		}
-	}
-	for(;(j < right + 1) || (i < mid + 1); j++, i++){
-		h[hi++] = i > mid ? s[j] : s[i];
-	}
-	for(var k = 0; k != h.length; k++){
-		s[left++] = h[k];
 	}
 	return smallSum;
 }
