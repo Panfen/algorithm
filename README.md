@@ -35,7 +35,7 @@
 #### 8. 双指针
 [8.1 姓名中的重复字符](./md/8.1repleatCharsInName.md) (★★☆☆☆)
 
-[8.2 颜色分类](.md/8.2colorClassification.md) (★★☆☆☆)
+[8.2 颜色分类](./md/8.2colorClassification.md) (★★☆☆☆)
 
 #### 9. 滑动窗口
 [9.1 无重复字符的最长子串](./md/9.1longestSubstr.md) (★★★☆☆)
