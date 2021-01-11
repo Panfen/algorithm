@@ -14,17 +14,19 @@
 
 [1.5 数组去重乱序求交并差集](./md/1.5arrayOptions.md) (★★☆☆☆)
 
-[1.6 矩阵分圈打印](./md/1.6matrixCirclePrint.md) (★★☆☆☆)
+[1.6 打印螺旋矩阵](./md/1.12printCircle.md) (★★☆☆☆)
 
-[1.7 方阵旋转打印](./md/1.7matrixRotatePrint.md) (★★☆☆☆)
+[1.7 矩阵分圈打印](./md/1.6matrixCirclePrint.md) (★★☆☆☆)
 
-[1.8 找到无序数组中的最小k个数(TOP-K问题)](./md/1.8minKDisorderArr.md) (★★★★☆)
+[1.8 方阵旋转打印](./md/1.7matrixRotatePrint.md) (★★☆☆☆)
 
-[1.9 需要排序的最短子数组长度](./md/1.9minDisorderLength.md)(★★☆☆☆)
+[1.9 找到无序数组中的最小k个数(TOP-K问题)](./md/1.8minKDisorderArr.md) (★★★★☆)
 
-[1.10 在数组中找到出现次数大于N/K的数](./md/1.10findOverKNumbers.md) (★★★★☆)
+[1.10 需要排序的最短子数组长度](./md/1.9minDisorderLength.md)(★★☆☆☆)
 
-[1.11 计算数组的小和](./md/1.11getSmallSum.md) (★★★★☆)
+[1.11 在数组中找到出现次数大于N/K的数](./md/1.10findOverKNumbers.md) (★★★★☆)
+
+[1.12 计算数组的小和](./md/1.11getSmallSum.md) (★★★★☆)
 
 #### 2. 二叉树
 #### 3. 动态规划
